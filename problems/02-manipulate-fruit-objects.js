@@ -4,25 +4,32 @@ const fruits = require('../fruit-data')
 /* 07. `addKeyAndValueToAll()` - Return the fruits array, adding the given key and
 value to each fruit object
 
-console.log(addKeyAndValueToAll(fruits, "inStock", true));
 // returns array of 31 fruits, and each fruit object includes "inStock: true"
 */
 
 function addKeyAndValueToAll(array, key, value) {
-    // Your code here 
+
+    for (let obj of array) {
+        obj[key] = value
+    }
+
+    return array;
 }
 
+console.log(addKeyAndValueToAll(fruits, "inStock", true));
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
 value to that fruit object
 
-console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 // returns first object ("Apple"), including "color: red"
 */
 
 function addKeyAndValueToOne(array, key, value, index) {
-    // Your code here 
+    for (let el of array) {
+        if (el)
+    }
 }
 
+console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
 objects, and return the resulting array.
 HINT: Can you make a copy of the old key and value, and then delete the original?
@@ -65,4 +72,4 @@ function deleteKeysAndValues(array, keyToDelete) {
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
-module.exports = [ addKeyAndValueToAll, addKeyAndValueToOne, updateKeyName, updateIdValues, deleteKeysAndValues ];
+module.exports = [addKeyAndValueToAll, addKeyAndValueToOne, updateKeyName, updateIdValues, deleteKeysAndValues];
