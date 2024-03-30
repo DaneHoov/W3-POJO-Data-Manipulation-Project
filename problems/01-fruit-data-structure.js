@@ -89,7 +89,7 @@ problem? Can you use a helper function?
 
 function getNutritionsKeys(fruits) {
 
-    for (obj of fruits) {
+    for (let obj of fruits) {
         let nutrition = obj.nutritions;
         let facts = Object.keys(nutrition)
         return facts
