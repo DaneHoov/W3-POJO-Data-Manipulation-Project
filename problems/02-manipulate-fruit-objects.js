@@ -24,12 +24,13 @@ value to that fruit object
 */
 
 function addKeyAndValueToOne(array, key, value, index) {
-    for (let el of array) {
-        if (el)
-    }
+
+    let entry = array[index];
+    entry[key] = value;
+    return entry;
 }
 
-console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
+console.log(addKeyAndValueToOne(fruits, "color", "red", 0));
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
 objects, and return the resulting array.
 HINT: Can you make a copy of the old key and value, and then delete the original?
